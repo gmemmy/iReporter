@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  background-size: cover;
+  background-position: center;
+  -webkit-backdrop-filter: blur(10000px);
+}
+
+table {
+  margin-top: 100px;
+  width: 100%;
+  font-display: bold;
+  font-size: 20px;
+  border-spacing: 2px;
+}
+
+table, th {
+  text-align: left;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 15px;
+}
