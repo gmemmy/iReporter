@@ -5,12 +5,8 @@ import Incidents from "../model/flagRecords";
 import bodyParser from "body-parser";
 import express from "express";
 
+export default class Controller {
 
-
-//This point creates a red flag record
-app.post("/newRecord", (req, res) => {
-
-})
 
 
 /***
@@ -19,7 +15,7 @@ app.post("/newRecord", (req, res) => {
 * @param {object} res - HTTP Response
 ***/
 
-app.get("/records", (req, res) => {
+allredflagRecords(req, res) {
 	let redFlags =  Incidents.filter(Incident => Incident.type === "Red Flag");
 	if (redFlags.length >= 1) {
 			res.send({
@@ -32,7 +28,7 @@ app.get("/records", (req, res) => {
 					"error": "No Red Flag Records Found!",
 			});
 	}
-})
+};
 
 /***
 *	@description  GET a specific red flag record.
@@ -40,7 +36,7 @@ app.get("/records", (req, res) => {
 * @param {object} res - HTTP Response
 ***/
 
-app.get("/flagRecord", (req, res) => {
+singleRedFlagRecord(req, res) {
 	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
 	if (specificRecord = false) {
  res.send({
@@ -53,7 +49,7 @@ app.get("/flagRecord", (req, res) => {
 			"data":	[specificRecord],
 		});
 	}
-})
+};
 
 
 /***
@@ -62,7 +58,7 @@ app.get("/flagRecord", (req, res) => {
 * @param {object} res - HTTP Response
 ***/
 
-app.put("/comment", (req, res) => {
+changeComment(req, res)  {
 	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
 	//Edit record's comment
 	if (specificRecord) {
@@ -81,11 +77,12 @@ app.put("/comment", (req, res) => {
 			"message": "Record not found!",
 		});
 	}}
-})
+}
 
-app.put("/location", (req, res) => {
+//Edit record's location
+changeLocation (req, res){
 	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
-	//Edit record's location
+	
 	if (specificRecord) {
 		const { recordLocation } = req.body;
 		if(specificRecord.location = recordLocation) {
@@ -93,7 +90,7 @@ app.put("/location", (req, res) => {
 				"status":	200,
 				"data":	[{
 					"id":	specificRecord.id,
-					"message":	"Updated red-flag record’s comment",
+					"message":	"Updated red-flag record’s location",
 				}]
 			})
 		}
@@ -103,4 +100,14 @@ app.put("/location", (req, res) => {
 			"message":	"Record not found",
 		});
 	}
-})
+};
+
+
+/***
+*	@description  DELETE a specific red flag record.
+*	@param {object} req - HTTP Request
+* @param {object} res - HTTP Response
+***/
+
+
+}
