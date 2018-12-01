@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 			res.json({
 				status: 200,
 				data: redFlags,
-			})
+			});
 	} else {
 			res.json({
 					status: 404,
@@ -31,5 +31,16 @@ app.get("/", (req, res) => {
 
 //This endpoint grabs a specific red flag record
 app.get("/flagRecord", (req, res) => {
-	const singleRecord = Incidents.filter(Incident => [req.params])
+	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
+	if (specificRecord = false) {
+ res.json({
+		status: 404,
+		message:	"Oops! No record found with this id",
+	});
+	} else {
+		res.json({
+			status: 200,
+			data:	[specificRecord],
+		});
+	}
 })
