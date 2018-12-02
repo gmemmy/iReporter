@@ -13,6 +13,8 @@ export default class Controller {
 *	@description  GET all red-flag records.
 *	@param {object} req - HTTP Request
 * @param {object} res - HTTP Response
+* @memberof Controller
+* @returns {object} Class instance
 ***/
 
 allredflagRecords(req, res) {
@@ -34,6 +36,8 @@ allredflagRecords(req, res) {
 *	@description  GET a specific red flag record.
 *	@param {object} req - HTTP Request
 * @param {object} res - HTTP Response
+* @memberof Controller
+* @returns {object} Class instance
 ***/
 
 singleRedFlagRecord(req, res) {
@@ -56,6 +60,8 @@ singleRedFlagRecord(req, res) {
 *	@description  EDIT a specific red flag record.
 *	@param {object} req - HTTP Request
 * @param {object} res - HTTP Response
+* @memberof Controller
+* @returns {object} Class instance
 ***/
 
 changeComment(req, res)  {
