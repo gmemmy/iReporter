@@ -12,7 +12,7 @@ export default class Controller {
 * @returns {object} Class instance
 ***/
 
-allredflagRecords(res) {
+allredflagRecords(req, res) {
 	let redFlags =  Incidents.filter(Incident => Incident.type === "Red Flag");
 	if (redFlags.length >= 1) {
 			res.send({
