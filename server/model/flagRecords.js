@@ -2,9 +2,9 @@ import faker from "faker";
 
 const Incidents = [
   {
-    id: faker.random.number(),
+    id: 1,
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 53,
     type: "intervention",
     location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
     status: "draft",
@@ -13,9 +13,9 @@ const Incidents = [
     comment: faker.lorem.sentences(),
   },
   {
-    id: faker.random.number(),
+    id: 2,
     createdOn: faker.date.past(),
-    createdBy: 2,
+    createdBy: 20,
     type: "Red Flag",
     location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
     status: "draft",
@@ -24,9 +24,9 @@ const Incidents = [
     comment: faker.lorem.sentences(),
   },
   {
-    id: faker.random.number(),
+    id: 3,
     createdOn: faker.date.past(),
-    createdBy: 3,
+    createdBy: 35,
     type: "intervention",
     location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
     status: "draft",
@@ -35,7 +35,7 @@ const Incidents = [
     comment: faker.lorem.sentences(),
   },
   {
-    id: faker.random.number(),
+    id: 4,
     createdOn: faker.date.past(),
     createdBy: 4,
     type: "Red Flag",
@@ -46,9 +46,9 @@ const Incidents = [
     comment: faker.lorem.sentences(),
   },
   {
-    id: faker.random.number(),
+    id: 5,
     createdOn: faker.date.past(),
-    createdBy: 5,
+    createdBy: 40,
     type: "intervention",
     location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
     status: "draft",
@@ -57,9 +57,9 @@ const Incidents = [
     comment: faker.lorem.sentences(),
   },
   {
-    id: faker.random.number(),
+    id: 6,
     createdOn: faker.date.past(),
-    createdBy: 6,
+    createdBy: 11,
     type: "intervention",
     location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
     status: "draft",
@@ -68,9 +68,9 @@ const Incidents = [
     comment: faker.lorem.sentences(),
   },
   {
-    id: faker.random.number(),
+    id: 7,
     createdOn: faker.date.past(),
-    createdBy: 7,
+    createdBy: 10,
     type: "Red Flag",
     location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
     status: "draft",
@@ -79,9 +79,9 @@ const Incidents = [
     comment: faker.lorem.sentences(),
   },
   {
-    id: faker.random.number(),
+    id: 8,
     createdOn: faker.date.past(),
-    createdBy: 8,
+    createdBy: 24,
     type: "intervention",
     location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
     status: "draft",
