@@ -1,9 +1,4 @@
-import faker from "faker";
-import app from "../App";
-import User from "../model/User";
 import Incidents from "../model/flagRecords";
-import bodyParser from "body-parser";
-import express from "express";
 
 export default class Controller {
 
@@ -17,7 +12,7 @@ export default class Controller {
 * @returns {object} Class instance
 ***/
 
-allredflagRecords(req, res) {
+allredflagRecords(res) {
 	let redFlags =  Incidents.filter(Incident => Incident.type === "Red Flag");
 	if (redFlags.length >= 1) {
 			res.send({
