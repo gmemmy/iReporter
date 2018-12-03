@@ -15,7 +15,7 @@ const Incidents = [
   {
     id: faker.random.number(),
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 2,
     type: "Red Flag",
     location: faker.address.streetAddress() + faker.address.city(),
     status: draft,
@@ -26,7 +26,7 @@ const Incidents = [
   {
     id: faker.random.number(),
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 3,
     type: 'intervention',
     location: faker.address.streetAddress() + faker.address.city(),
     status: draft,
@@ -37,7 +37,7 @@ const Incidents = [
   {
     id: faker.random.number(),
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 4,
     type: "Red Flag",
     location: faker.address.streetAddress() + faker.address.city(),
     status: draft,
@@ -48,7 +48,7 @@ const Incidents = [
   {
     id: faker.random.number(),
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 5,
     type: 'intervention',
     location: faker.address.streetAddress() + faker.address.city(),
     status: draft,
@@ -59,7 +59,7 @@ const Incidents = [
   {
     id: faker.random.number(),
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 6,
     type: 'intervention',
     location: faker.address.streetAddress() + faker.address.city(),
     status: draft,
@@ -70,7 +70,7 @@ const Incidents = [
   {
     id: faker.random.number(),
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 7,
     type: "Red Flag",
     location: faker.address.streetAddress() + faker.address.city(),
     status: draft,
@@ -81,7 +81,7 @@ const Incidents = [
   {
     id: faker.random.number(),
     createdOn: faker.date.past(),
-    createdBy: 1,
+    createdBy: 8,
     type: 'intervention',
     location: faker.address.streetAddress() + faker.address.city(),
     status: draft,
