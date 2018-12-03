@@ -2,6 +2,7 @@ import faker from "faker";
 
 const User = [
   {
+
     id : 1,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
@@ -13,6 +14,7 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
+
     id : 2,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
@@ -24,6 +26,7 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
+
     id : 3,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
@@ -35,6 +38,7 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
+
     id : 4,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
@@ -46,6 +50,7 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
+
     id : 5,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
@@ -57,6 +62,7 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
+
     id : 6,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
@@ -68,6 +74,7 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
+
     id : 7,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
