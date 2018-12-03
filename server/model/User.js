@@ -4,8 +4,8 @@ const User = [
   {
 
     id : 1,
-    firstname : faker.name.findName(),
-    lastname : faker.name.findName() ,
+    firstname : faker.name.firstName(),
+    lastname : faker.name.lastName(),
     othernames : faker.name.findName() ,
     email : faker.internet.email() ,
     phoneNumber : faker.phone.number(),
@@ -16,8 +16,8 @@ const User = [
   {
 
     id : 2,
-    firstname : faker.name.findName(),
-    lastname : faker.name.findName() ,
+    firstname : faker.name.firstName(),
+    lastname : faker.name.lastName(),
     othernames : faker.name.findName() ,
     email : faker.internet.email() ,
     phoneNumber : faker.phone.number(),
@@ -28,8 +28,8 @@ const User = [
   {
 
     id : 3,
-    firstname : faker.name.findName(),
-    lastname : faker.name.findName() ,
+    firstname : faker.name.firstName(),
+    lastname : faker.name.lastName(),
     othernames : faker.name.findName() ,
     email : faker.internet.email() ,
     phoneNumber : faker.phone.number(),
@@ -40,8 +40,8 @@ const User = [
   {
 
     id : 4,
-    firstname : faker.name.findName(),
-    lastname : faker.name.findName() ,
+    firstname : faker.name.firstName(),
+    lastname : faker.name.lastName(),
     othernames : faker.name.findName() ,
     email : faker.internet.email() ,
     phoneNumber : faker.phone.number(),
@@ -52,8 +52,8 @@ const User = [
   {
 
     id : 5,
-    firstname : faker.name.findName(),
-    lastname : faker.name.findName() ,
+    firstname : faker.name.firstName(),
+    lastname : faker.name.lastName(),
     othernames : faker.name.findName() ,
     email : faker.internet.email() ,
     phoneNumber : faker.phone.number(),
@@ -64,8 +64,8 @@ const User = [
   {
 
     id : 6,
-    firstname : faker.name.findName(),
-    lastname : faker.name.findName() ,
+    firstname : faker.name.firstName(),
+    lastname : faker.name.lastName(),
     othernames : faker.name.findName() ,
     email : faker.internet.email() ,
     phoneNumber : faker.phone.number(),
@@ -76,8 +76,8 @@ const User = [
   {
 
     id : 7,
-    firstname : faker.name.findName(),
-    lastname : faker.name.findName() ,
+    firstname : faker.name.firstName(),
+    lastname : faker.name.lastName(),
     othernames : faker.name.findName() ,
     email : faker.internet.email() ,
     phoneNumber : faker.phone.number(),
