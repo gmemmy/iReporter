@@ -2,7 +2,8 @@ import faker from "faker";
 
 const User = [
   {
-    id : faker.random.number(),
+
+    id : 1,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
     othernames : faker.name.findName() ,
@@ -13,7 +14,8 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
-    id : faker.random.number(),
+
+    id : 2,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
     othernames : faker.name.findName() ,
@@ -24,7 +26,8 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
-    id : faker.random.number(),
+
+    id : 3,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
     othernames : faker.name.findName() ,
@@ -35,7 +38,8 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
-    id : faker.random.number(),
+
+    id : 4,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
     othernames : faker.name.findName() ,
@@ -46,7 +50,8 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
-    id : faker.random.number(),
+
+    id : 5,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
     othernames : faker.name.findName() ,
@@ -57,7 +62,8 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
-    id : faker.random.number(),
+
+    id : 6,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
     othernames : faker.name.findName() ,
@@ -68,7 +74,8 @@ const User = [
     isAdmin : faker.random.boolean()
   },
   {
-    id : faker.random.number(),
+
+    id : 7,
     firstname : faker.name.findName(),
     lastname : faker.name.findName() ,
     othernames : faker.name.findName() ,
