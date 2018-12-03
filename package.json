@@ -2,7 +2,7 @@
   "name": "ireporter",
   "version": "1.0.0",
   "description": "iReporter",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "start": "babel-node --presets env,es2015 server/App.js",
     "test": "mocha server/test/index.js --require babel-register --exit"
