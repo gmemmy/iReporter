@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build && node ./build/App.js",
     "build": "npm run clean && npm run build-babel",
-    "test": "mocha server/test/index.js --require babel-register --exit",
+    "test": "cross-env NODE_ENV=test mocha server/test/index.js",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./server -s"
   },
@@ -32,6 +32,7 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
+    "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "faker": "^4.1.0"
   }
