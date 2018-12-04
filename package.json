@@ -4,8 +4,11 @@
   "description": "iReporter",
   "main": "App.js",
   "scripts": {
-    "start": "babel-node --presets env,es2015 dist/server/App.js",
-    "test": "mocha server/test/index.js --require babel-register --exit"
+    "start": "npm run build && node ./build/App.js",
+    "build": "npm run clean && npm run build-babel",
+    "test": "mocha server/test/index.js --require babel-register --exit",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./server -s"
   },
   "repository": {
     "type": "git",
