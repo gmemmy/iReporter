@@ -37,7 +37,7 @@ allredflagRecords(req, res) {
 
 singleRedFlagRecord(req, res) {
 	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
-	if (specificRecord = false) {
+	if (!specificRecord) {
  res.send({
 		"status": 404,
 		"error":	"Oops! No record found with this id!",
