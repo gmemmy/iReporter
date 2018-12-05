@@ -1,7 +1,13 @@
 import Incidents from "../model/flagRecords";
 
 export default class Controller {
-
+	/***
+*	@description ADD a new red flag record.
+*	@param {object} req - HTTP Request
+* @param {object} res - HTTP Response
+* @memberof Controller
+* @returns {object} Class instance
+***/
 
 
 /***
@@ -12,7 +18,7 @@ export default class Controller {
 * @returns {object} Class instance
 ***/
 
-allredflagRecords(req, res) {
+allRedFlagRecords(req, res,) {
 	let redFlags =  Incidents.filter(Incident => Incident.type === "Red Flag");
 	if (redFlags.length >= 1) {
 			res.send({
@@ -52,7 +58,7 @@ singleRedFlagRecord(req, res) {
 
 
 /***
-*	@description  EDIT a specific red flag record.
+*	@description  EDIT comment of a specific red flag record.
 *	@param {object} req - HTTP Request
 * @param {object} res - HTTP Response
 * @memberof Controller
@@ -78,7 +84,15 @@ changeComment(req, res)  {
 			"message": "Record not found!",
 		});
 	}}
-}
+};
+
+/***
+*	@description  EDIT location of a specific red flag record.
+*	@param {object} req - HTTP Request
+* @param {object} res - HTTP Response
+* @memberof Controller
+* @returns {object} Class instance
+***/
 
 //Edit record's location
 changeLocation (req, res){
