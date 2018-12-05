@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/records.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>iReporter</title>
+    <!--Nav bar-->
+    <div class="hero" id="myNavbar">
+      <a href="#">Home</a>
+      <a href="records.html" class="active">New Record</a>
+      <a href="profile.html">My Profile</a>
+      <a href="login.html">Sign Out</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+   </head>
+
+   <body>
+    <div class="container">
+     <form action="">
+       <div class="row">
+         <div class="col-25">
+           <label for="rname">Name of record:</label>
+         </div>
+         <div class="col-75">
+           <input type="text" id="rname" name="firstname" placeholder="">
+         </div>
+       </div>
+       
+       <div class="row">
+         <div class="col-25">
+           <label for="record">Type of record:</label>
+         </div>
+         <div class="col-75">
+           <select id="record" name="record">
+             <option value="">Intervention</option>
+             <option value="">Red Flag</option>
+           </select>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-25">
+           <label for="subject">Subject:</label>
+         </div>
+         <div class="col-75">
+           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+         </div>
+       </div>
+       <div class="row">
+        <div class="col-25">
+         <label> <for="picture">Upload image/images:</label>
+        </div>
+        <div class="col-75">
+         <input type="file" name="pic" accept="picture/*">
+        </div>
+       </div>
+       <div class="row">
+         <input type="submit" value="Create new record">
+       </div>
+     </form>
+   </div>
+   </body>
