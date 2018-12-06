@@ -1,8 +1,31 @@
 import Incidents from "../model/flagRecords";
 
 export default class Controller {
+	/***
+*	@description ADD a new red flag record.
+*	@param {object} req - HTTP Request
+* @param {object} res - HTTP Response
+* @memberof Controller
+* @returns {object} Class instance
+***/
 
+addRedFlagRecord(req, res) {
+	const { Record } = req.body;
 
+	const previousRecord = Incidents.reverse()[0];
+ Record.createdBy = 1;
+	Record.createdOn = faker.date.recent();
+ Record.id = previousRecord.id + 1;
+	Incidents.push(req.body);
+
+	res.send({
+		"status:": 200,
+		"data": [{
+			"id": Record.id,
+			"message": "Red Flag record created!",
+		}]
+	})
+}
 
 /***
 *	@description  GET all red-flag records.
@@ -12,7 +35,7 @@ export default class Controller {
 * @returns {object} Class instance
 ***/
 
-allredflagRecords(req, res) {
+allRedFlagRecords(req, res,) {
 	let redFlags =  Incidents.filter(Incident => Incident.type === "Red Flag");
 	if (redFlags.length >= 1) {
 			res.send({
@@ -52,7 +75,7 @@ singleRedFlagRecord(req, res) {
 
 
 /***
-*	@description  EDIT a specific red flag record.
+*	@description  EDIT comment of a specific red flag record.
 *	@param {object} req - HTTP Request
 * @param {object} res - HTTP Response
 * @memberof Controller
@@ -78,10 +101,18 @@ changeComment(req, res)  {
 			"message": "Record not found!",
 		});
 	}}
-}
+};
+
+/***
+*	@description  EDIT location of a specific red flag record.
+*	@param {object} req - HTTP Request
+* @param {object} res - HTTP Response
+* @memberof Controller
+* @returns {object} Class instance
+***/
 
 //Edit record's location
-changeLocation (req, res){
+editRecordlocation (req, res){
 	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
 	
 	if (specificRecord) {
@@ -110,5 +141,29 @@ changeLocation (req, res){
 * @param {object} res - HTTP Response
 ***/
 
+deleteRecord(req, res) {
+	const recordIndex = Number(req.params.id);
+
+	Incidents.forEach((Incident, incidentIndex) => {
+		if (recordIndex = Incidents.id) {
+			const deletedRecord = Incidents.splice(incidentIndex, 1);
+
+			if(deletedRecord) {
+				res.send({
+					"status": 200,
+					"data": [{
+						"id": req.params.id,
+						"message": "Red Flag record succesfully deleted!",
+					}]
+				})
+			}
+		} else {
+			res.send({
+				"status": 404,
+				"error": "No Red Flag record found with this id!",
+			})
+		}
+	})
+}
 
 }
