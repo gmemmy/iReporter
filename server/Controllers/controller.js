@@ -11,7 +11,6 @@ export default class Controller {
 
 addRedFlagRecord(req, res) {
 	const { Record } = req.body;
-
 	const previousRecord = Incidents.reverse()[0];
  Record.createdBy = 1;
 	Record.createdOn = faker.date.recent();
