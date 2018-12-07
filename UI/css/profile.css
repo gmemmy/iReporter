@@ -56,7 +56,7 @@ body {
 }
 
 #records {
-  margin-top: 20%;
+  margin-top: 5%;
   width: 100%;
   font-size: 20px;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -84,23 +84,13 @@ body {
 }
 
 
-
-* {
-  margin: 0;
-}
-
-.page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -142px; 
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-.site-footer, .page-wrap:after {
-  height: 142px; 
-}
-.site-footer {
-  background: orange;
+.page_footer {
+    position: fixed;
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(5, 4, 0, 0.466);
+    text-align: center;
+    color: rgba(233, 199, 50, 0.466);
 }
