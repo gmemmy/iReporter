@@ -14,3 +14,6 @@ iReporter enables any/every citizen to bring any form of corruption to the notic
 `$ git clone https://github.com/gmemmy/iReporter.git` <br/>
 `$ npm install` <br/>
 `$ npm start` <br/>
+
+## Site is Published At
+https://gmemmy.github.io/iReporter/
