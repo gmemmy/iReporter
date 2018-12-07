@@ -1,13 +1,13 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/admin.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>iReporter</title>
     <!--Nav bar-->
     <div class="hero" id="myNavbar">
-      <a href="login.html">Home</a>
+      <a href="home.html">Home</a>
       <a href="profile.html">My Profile</a>
-      <a href="#" class="active">Admin</a>
-      <a href="signup.html">Sign Out</a>
+      <a href="admin.html" class="active">Admin</a>
+      <a href="login.html">Sign Out</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -16,34 +16,60 @@
 
   <body>
     <div class="table">
-      <table>
+      <table id="records">
         <tr>
-          <th>Red flags/Intervention Records</th>
-          <th>Resolved Cases</th>
-          <th>Pending Cases</th>
-          <th>Rejected Cases</th>
+          <th>Record</th>
+          <th>Date Created</th>
+          <th>Record Status</th>
         </tr>
         <tr>
-          <td>Robbery</td>
+          <td>Poor Drainage System</td>
+          <td>02/12/2018</td>
           <td>
-            <label class="container">
-            <input type="radio" checked="checked">
-            <span class="checkmark"></span>
-            </label>
+            <select id="record" name="record">
+              <option value="">Resolved</option>
+              <option value="">Pending</option>
+              <option value="">Under Investigation</option>
           </td>
-          <td>
-            <label class="container">
-              <input type="radio">
-              <span class="checkmark"></span>
-            </label>
-          <td>
-            <label class="container">
-              <input type="radio">
-              <span class="checkmark"></span>
-            </label>
-          </td>
-                
         </tr>
+        <tr>
+          <td>Poor Drainage System</td>
+          <td>02/12/18</td>
+          <td>
+            <select id="record" name="record">
+              <option value="">Resolved</option>
+              <option value="">Pending</option>
+              <option value="">Under Investigation</option>
+          </td>
+        </tr>
+        <tr>
+          <td>Poor Drainage System</td>
+          <td>11/12/18</td>
+          <td>
+            <select id="record" name="record">
+              <option value="">Resolved</option>
+              <option value="">Pending</option>
+              <option value="">Under Investigation</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Poor Drainage System</td>
+          <td>12/12/18</td>
+          <td>
+            <select id="record" name="record">
+              <option value="">Resolved</option>
+              <option value="">Pending</option>
+              <option value="">Under Investigation</option>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    
+    <div class="page_footer">
+      <p>iReporter 2018.</p>
+    </div>
       </table>
     </div>
   </body>
