@@ -121,3 +121,14 @@ input[type=submit] {
     margin-top: 0;
   }
 }
+
+.page_footer {
+  position: fixed;
+  border-radius: 5px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(5, 4, 0, 0.466);
+  text-align: center;
+  color: rgba(243, 231, 182, 0.466);
+}
