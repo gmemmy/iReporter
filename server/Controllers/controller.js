@@ -111,7 +111,7 @@ changeComment(req, res)  {
 ***/
 
 //Edit record's location
-editRecordlocation (req, res){
+editRecordlocation(req, res){
 	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
 	
 	if (specificRecord) {
@@ -144,7 +144,7 @@ deleteRecord(req, res) {
 	const recordIndex = Number(req.params.id);
 
 	Incidents.forEach((Incident, incidentIndex) => {
-		if (recordIndex = Incidents.id) {
+		if (recordIndex === Incidents.id) {
 			const deletedRecord = Incidents.splice(incidentIndex, 1);
 
 			if(deletedRecord) {
