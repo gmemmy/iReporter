@@ -1,4 +1,4 @@
-import ControllerBase from "../controllers/controller"
+import ControllerBase from "../Controllers/controller"
 
 const Controller = new ControllerBase()
 
