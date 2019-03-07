@@ -2,16 +2,16 @@ import chai from "chai";
 import faker from "faker";
 import chaiHttp from "chai-http";
 import app from "../App";
-import Controller from "../controllers/controller";
+import Controller from "../Controllers/controller";
 const { expect } = chai;
 
 chai.use(chaiHttp);
 
 
-describe("GET api/v1/Red flags", () => {
+describe("GET api/v1/Redflags", () => {
   it("should return all available Red flag records", (done) => {
     chai.request(app)
-      .get("/api/v1/Red flags")
+      .get("/api/v1/Redflags")
       .end((err, res) => {
         if (err) done();
         const { body } = res;
@@ -25,10 +25,10 @@ describe("GET api/v1/Red flags", () => {
   });
 });
 
-describe("GET api/v1/Red flags/:id", () => {
+describe("GET api/v1/Redflags/:id", () => {
   it("should return a Red flag record with a specific id", (done) => {
     chai.request(app)
-      .get("/api/v1/Red flags/2")
+      .get("/api/v1/Redflags/2")
       .end((err, res) => {
         if (err) done();
         const { body } = res;
@@ -42,10 +42,10 @@ describe("GET api/v1/Red flags/:id", () => {
   });
 });
 
-describe("GET api/v1/Red flags/:id (id is non-existent)", () => {
+describe("GET api/v1/Redflags/:id (id is non-existent)", () => {
   it("should return an error if a user attempts to make a request for an unexistent record id", (done) => {
     chai.request(app)
-      .get(`/api/v1/Red flags/${faker.random.number() + faker.random.number()}`)
+      .get(`/api/v1/Redflags/${faker.random.number() + faker.random.number()}`)
       .end((err, res) => {
         if (err) done();
         const { body } = res;
@@ -59,7 +59,7 @@ describe("GET api/v1/Red flags/:id (id is non-existent)", () => {
   });
 });
 
-describe("POST api/v1/Red flags", () => {
+describe("POST api/v1/Redflags", () => {
   it("should create a record if user input is valid", (done) => {
     chai.request(app)
       .post("/api/v1/Red flags/")
@@ -84,7 +84,7 @@ describe("POST api/v1/Red flags", () => {
   });
 });
 
-describe("POST api/v1/Red flags", () => {
+describe("POST api/v1/Redflags", () => {
   it("should return an error if user input is invalid", (done) => {
     chai.request(app)
       .post("/api/v1/Red flags/")
@@ -106,10 +106,10 @@ describe("POST api/v1/Red flags", () => {
   });
 });
 
-describe("PATCH api/v1/Red flags/:id/location", () => {
+describe("PATCH api/v1/Redflags/:id/location", () => {
   it("should edit the location value of a record if it exists", (done) => {
     chai.request(app)
-      .patch("/api/v1/Red flags/1/location")
+      .patch("/api/v1/Redflags/1/location")
       .send({
         location: "543.3213, 423.242",
       })
@@ -127,10 +127,10 @@ describe("PATCH api/v1/Red flags/:id/location", () => {
   });
 });
 
-describe("PATCH api/v1/Red flags/:id/location", () => {
+describe("PATCH api/v1/Redflags/:id/location", () => {
   it("should return an error if the record of that id is non-existent", (done) => {
     chai.request(app)
-      .patch("/api/v1/Red flags/non-existent-stuff/location")
+      .patch("/api/v1/Redflags/non-existent-stuff/location")
       .send({
         location: `${faker.address.longitude()}, ${faker.address.latitude()}`,
       })
@@ -147,10 +147,10 @@ describe("PATCH api/v1/Red flags/:id/location", () => {
   });
 });
 
-describe("PATCH api/v1/Red flags/:id/location", () => {
+describe("PATCH api/v1/Redflags/:id/location", () => {
   it("should return an error if the location field is empty", (done) => {
     chai.request(app)
-      .patch("/api/v1/Red flags/1/location")
+      .patch("/api/v1/Redflags/1/location")
       .send({
         location: undefined,
       })
@@ -167,10 +167,10 @@ describe("PATCH api/v1/Red flags/:id/location", () => {
   });
 });
 
-describe("PATCH api/v1/Red flags/:id/comment", () => {
+describe("PATCH api/v1/Redflags/:id/comment", () => {
   it("edit the comment value of a record if it exists", (done) => {
     chai.request(app)
-      .patch("/api/v1/Red flags/1/comment")
+      .patch("/api/v1/Redflags/1/comment")
       .send({
         comment: faker.random.words(),
       })
@@ -187,10 +187,10 @@ describe("PATCH api/v1/Red flags/:id/comment", () => {
   });
 });
 
-describe("PATCH api/v1/Red flags/:id/comment", () => {
+describe("PATCH api/v1/Redflags/:id/comment", () => {
   it("should return an error if the id is not existing", (done) => {
     chai.request(app)
-      .patch("/api/v1/Red flags/non-existing-id/comment")
+      .patch("/api/v1/Redflags/non-existing-id/comment")
       .send({
         comment: faker.random.words(),
       })
@@ -206,10 +206,10 @@ describe("PATCH api/v1/Red flags/:id/comment", () => {
   });
 });
 
-describe("PATCH api/v1/Red flags/:id/comment", () => {
+describe("PATCH api/v1/Redflags/:id/comment", () => {
   it("should return an error if the comment field is empty", (done) => {
     chai.request(app)
-      .patch("/api/v1/Red flags/1/comment")
+      .patch("/api/v1/Redflags/1/comment")
       .send({
         comment: undefined,
       })
@@ -226,10 +226,10 @@ describe("PATCH api/v1/Red flags/:id/comment", () => {
   });
 });
 
-describe("Delete api/v1/Red flags/:id/", () => {
+describe("Delete api/v1/Redflags/:id/", () => {
   it("should delete a record by id if it exists", (done) => {
     chai.request(app)
-      .delete("/api/v1/Red flags/1/")
+      .delete("/api/v1/Redflags/1/")
       .end((err, res) => {
         if (err) done();
         const { body } = res;
@@ -243,10 +243,10 @@ describe("Delete api/v1/Red flags/:id/", () => {
   });
 });
 
-describe("Delete api/v1/Red flags/:id/", () => {
+describe("Delete api/v1/Redflags/:id/", () => {
   it("should delete a record by id if it doesn't exist", (done) => {
     chai.request(app)
-      .delete("/api/v1/Red flags/1/")
+      .delete("/api/v1/Redflags/1/")
       .end((err, res) => {
         if (err) done();
         const { body } = res;

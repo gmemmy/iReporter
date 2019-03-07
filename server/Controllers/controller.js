@@ -83,6 +83,7 @@ singleRedFlagRecord(req, res) {
 
 changeComment(req, res)  {
 	const specificRecord = Incidents.find(Incident => Incident.id === Number(req.params.id));
+	
 	//Edit record's comment
 	if (specificRecord) {
 		const { recordComment } = req.body;
